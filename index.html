@@ -158,9 +158,10 @@ li .ph { display: block; width: 100%; max-width: 340px; aspect-ratio: 16/10; obj
 <polyline points="150,150 250,200 350,220 450,180 580,190 250,100" fill="none" stroke="var(--r1)" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
 <!-- Day 13 塔林古城動線 -->
 <polyline points="350,520 500,550 650,530 750,580" fill="none" stroke="var(--sh)" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
-<!-- Day 14 芬蘭堡與岩石教堂動線 -->
+<!-- Day 14 芬蘭堡與岩石教堂、Kappeli動線 -->
 <polyline points="350,220 650,300" fill="none" stroke="var(--r3)" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
 <polyline points="350,220 100,80" fill="none" stroke="var(--r3)" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
+<polyline points="250,200 320,210" fill="none" stroke="var(--r3)" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
 
 <!-- 交通時間標籤 (Time Pills) -->
 <g class="time-pill" transform="translate(200,175)"><rect x="-38" y="-12" width="76" height="24"/><text x="0" y="1">步行 10 分</text></g>
@@ -215,6 +216,9 @@ li .ph { display: block; width: 100%; max-width: 340px; aspect-ratio: 16/10; obj
 
 <g class="pin" id="pin-20" onclick="showInfo(20)"><circle cx="100" cy="80" r="14" fill="var(--r3)"/><text x="100" y="80">20</text></g>
 <text class="lbl" x="120" y="80">岩石教堂</text>
+
+<g class="pin" id="pin-23" onclick="showInfo(23)"><circle cx="320" cy="210" r="14" fill="var(--r3)"/><text x="320" y="210">23</text></g>
+<text class="lbl" x="340" y="210">Kappeli 餐廳</text>
 
 <!-- Tallinn Pins (Bottom) -->
 <g class="pin" id="pin-10" onclick="showInfo(10)"><circle cx="350" cy="520" r="14" fill="var(--sh)"/><text x="350" y="520">10</text></g>
@@ -428,8 +432,13 @@ li .ph { display: block; width: 100%; max-width: 340px; aspect-ratio: 16/10; obj
         <span>回到公寓享用專屬三溫暖設施，深度放鬆連日旅途的疲勞。</span>
     </li>
     <li data-n="23">
-        <i class="no">19:30 - 21:00</i><b>市區溫馨晚餐</b>
-        <span>可至附近的熱門餐廳（如 Nokka 或 Juuri）享用新北歐料理，或利用公寓廚房自炊。</span>
+        <i class="no">19:30 - 21:00</i><b>Kappeli 玻璃屋餐廳溫馨晚餐</b>
+        <span>於愛斯普拉納地公園 (Esplanadi) 內的百年玻璃屋餐廳 Kappeli 享用道地料理與溫馨氛圍，為旅程畫下完美句點。</span>
+        <img class="ph" src="Kappeli.jpg" alt="Kappeli 餐廳">
+        <div class="lk">
+            <a href="https://www.raflaamo.fi/en/restaurant/helsinki/kappeli" target="_blank">🌐 官方網站</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kappeli+Helsinki" target="_blank">📍 Google Maps</a>
+        </div>
     </li>
 </ol>
 </section>
@@ -449,6 +458,7 @@ const locations = {
     14: { title: "維魯門 (Viru Gate)", desc: "塔林舊城區最具代表性的古城門，進入童話世界的入口。", img: "維魯門 (Viru Gate).jpeg", map: "https://www.google.com/maps/search/?api=1&query=Viru+Gate+Tallinn" },
     18: { title: "芬蘭堡 (Suomenlinna)", desc: "世界文化遺產，跨越數世紀的海上防禦要塞，由多座島嶼組成。", img: "Suomenlinna.jpeg", web: "https://www.suomenlinna.fi/", map: "https://www.google.com/maps/search/?api=1&query=Suomenlinna+Helsinki" },
     20: { title: "岩石教堂", desc: "開鑿於天然花崗岩中的建築奇蹟，擁有極佳的音響效果與自然採光。", img: "Temppeliaukio.jpg", web: "https://temppeliaukionkirkko.fi/", map: "https://www.google.com/maps/search/?api=1&query=Temppeliaukio+Church+Helsinki" },
+    23: { title: "Kappeli 餐廳", desc: "位於愛斯普拉納地公園內的百年玻璃屋餐廳，是赫爾辛基最知名的地標餐廳之一。", img: "Kappeli.jpg", web: "https://www.raflaamo.fi/en/restaurant/helsinki/kappeli", map: "https://www.google.com/maps/search/?api=1&query=Kappeli+Helsinki" },
     'H': { title: "Bob W 公寓", desc: "本次旅程的住宿據點，附設專屬三溫暖 (Sauna) 設施供旅客放鬆。" }
 };
 
